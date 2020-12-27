@@ -1,0 +1,9 @@
+Important Methods for Async Requests
+
+1> open() -> which sets the stage and get the required information to make the Requests
+2> send() -> sends the request to the server
+3>onload() -> function called when an XMLHttpRequest transaction completes successfully
+4>callback is the function to be executed when the request completes successfully
+5>You might've picked up that onload is called when the response is successful.
+6>If something happens with the request and it can't be fulfilled, then we need to use the onerror property
+7>When making a request from an API that returns JSON, all we need to do is convert that JSON response into a JavaScript object. We can do that with JSON.parse()
