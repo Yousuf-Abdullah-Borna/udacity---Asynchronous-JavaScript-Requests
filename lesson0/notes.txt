@@ -7,3 +7,4 @@ Important Methods for Async Requests
 5>You might've picked up that onload is called when the response is successful.
 6>If something happens with the request and it can't be fulfilled, then we need to use the onerror property
 7>When making a request from an API that returns JSON, all we need to do is convert that JSON response into a JavaScript object. We can do that with JSON.parse()
+8>Sets the value of an HTTP request header. You must call setRequestHeader()after open(), but before send().

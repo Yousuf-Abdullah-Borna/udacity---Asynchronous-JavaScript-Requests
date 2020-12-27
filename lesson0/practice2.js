@@ -2,7 +2,7 @@
 //DEPENDENCIES
 //var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-
+let responseData;
 
 
 //FUNCTIONS TO HANDLE THE REQUESTS
@@ -12,7 +12,8 @@ function handleSuccess () {
     const data = JSON.parse(this.responseText)
 
     console.log(data[0]);
-       
+    
+    responseData =data;
 
     data.forEach(element => {
         console.log("User Id: "+ element.id + ", Account created: " +element.actor.avatar_url);
@@ -39,6 +40,7 @@ asyncRequestObject.send();
 
 
 
+//DISPLAY THE RESPONSE DATA ON THE WEBPAGE
 
 
 
