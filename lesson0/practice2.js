@@ -26,16 +26,17 @@ function handleSuccess () {
     let table = document.createElement('table');
     table.style.border = '1px solid black';
     table.style.borderCollapse ='collapse';
-    table.style.width ='400px';
+    table.style.width ='600px';
     
     table.style.marginLeft= '38%';
 
     //FOR TABLE COLUMN HEADERS
     let trow = document.createElement('tr');
     let theadOne = document.createElement('th');
-    theadOne.innerHTML ="userId";
+    theadOne.innerHTML ="username";
+    
     let theadTwo = document.createElement('th');
-    theadTwo.innerHTML ="Avatar";
+    theadTwo.innerHTML ="Profile link";
     trow.append(theadOne)
     trow.append(theadTwo)
     table.append(trow)
@@ -45,12 +46,29 @@ function handleSuccess () {
     data.forEach(element => {
         console.log("User Id: "+ element.id + ", Account created: " +element.actor.avatar_url);
      
-         
-         
+          let trowData = document.createElement('tr');
+          let theadOneData = document.createElement('td');
+           theadOneData.innerHTML =element.actor.login;
+           theadOneData.style.textAlign = 'center';
+          let theadTwoData = document.createElement('th');
+          
+          let image = document.createElement('img');
+          image.src = element.actor.avatar_url;
+          image.style.width = '100px';
+          image.style.height ='100px';
+          theadTwoData.append(image);
+          theadTwoData.style.textAlign = 'center';
+
+
+
+          trowData.append(theadOneData);
+          trowData.append(theadTwoData);
+          table.append(trowData);
+
 
     });
 
-    
+    document.body.append(table);
 
   }
   
