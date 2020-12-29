@@ -29,7 +29,7 @@ function handleSuccess () {
     table.style.width ='600px';
     table.style.borderCollapse = 'collapse';
     
-    table.style.marginLeft= '38%';
+    table.style.marginLeft= '33%';
 
     //FOR TABLE COLUMN HEADERS
     let trow = document.createElement('tr');
