@@ -25,8 +25,9 @@ function handleSuccess () {
     //FOR TABLE ELEMENT
     let table = document.createElement('table');
     table.style.border = '1px solid black';
-    table.style.borderCollapse ='collapse';
+    table.style.borderRadius = '30px';
     table.style.width ='600px';
+    table.style.borderCollapse = 'collapse';
     
     table.style.marginLeft= '38%';
 
@@ -34,9 +35,12 @@ function handleSuccess () {
     let trow = document.createElement('tr');
     let theadOne = document.createElement('th');
     theadOne.innerHTML ="username";
-    
+    theadOne.style.fontSize= "40px";
+    theadOne.style.borderCollapse = 'collapse';
     let theadTwo = document.createElement('th');
-    theadTwo.innerHTML ="Profile link";
+    theadTwo.innerHTML ="Profile Photo";
+    theadTwo.style.fontSize= "40px";
+    theadTwo.style.borderCollapse = 'collapse';
     trow.append(theadOne)
     trow.append(theadTwo)
     table.append(trow)
@@ -47,19 +51,25 @@ function handleSuccess () {
         console.log("User Id: "+ element.id + ", Account created: " +element.actor.avatar_url);
      
           let trowData = document.createElement('tr');
+          
           let theadOneData = document.createElement('td');
            theadOneData.innerHTML =element.actor.login;
+           theadOneData.style.fontSize= "30px";
            theadOneData.style.textAlign = 'center';
+           theadOneData.style.border = '1px solid black';
+           theadOneData.style.borderCollapse = 'collapse';
+
+
           let theadTwoData = document.createElement('th');
-          
           let image = document.createElement('img');
           image.src = element.actor.avatar_url;
           image.style.width = '100px';
           image.style.height ='100px';
+          image.style.borderRadius = '100%';
           theadTwoData.append(image);
           theadTwoData.style.textAlign = 'center';
-
-
+          theadTwoData.style.border = '1px solid black';
+          theadTwoData.style.borderCollapse = 'collapse';
 
           trowData.append(theadOneData);
           trowData.append(theadTwoData);
@@ -69,6 +79,8 @@ function handleSuccess () {
     });
 
     document.body.append(table);
+
+    document.body.style.backgroundColor ='#FCAC32'
 
   }
   
