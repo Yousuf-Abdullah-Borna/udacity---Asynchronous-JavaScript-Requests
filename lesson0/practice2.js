@@ -19,6 +19,12 @@ function handleSuccess () {
         console.log("User Id: "+ element.id + ", Account created: " +element.actor.avatar_url);
     });
 
+    let header1 = document.createElement('h1');
+    header1.style.color = 'red';
+    header1.style.textAlign = 'center';
+    header1.innerHTML= "Github Profiles";
+    document.body.append(header1)
+
   }
   
   function handleError () { 
