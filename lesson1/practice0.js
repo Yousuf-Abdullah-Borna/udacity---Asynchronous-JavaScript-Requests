@@ -19,3 +19,11 @@ myPromise.then( (data)=>{
 console.log("I cannot wait for promise")
 
 
+let p2 = Promise.resolve("different ways of writing it")
+
+p2.then( (data)=>{
+
+    console.log(data)
+})
+
+
