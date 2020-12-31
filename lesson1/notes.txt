@@ -1,0 +1,4 @@
+Important Notes
+Fetch is the new way to make network requests
+Fetch is a new API that was built to make requesting resources (primarily across a network) a whole lot easier
+Fetch is promise-based
